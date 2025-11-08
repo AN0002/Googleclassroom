@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Classroom</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <div class="logo" id="homeLogo">
+            <svg class="logo-icon" viewBox="0 0 24 24" width="24" height="24">
+              <path
+                fill="#5f6368"
+                d="M1 3v8h8V3H1zm6 6H3V5h4v4zm-6 4v8h8v-8H1zm6 6H3v-4h4v4zm4-16v8h8V3h-8zm6 6h-4V5h4v4zm-6 4v8h8v-8h-8zm6 6h-4v-4h4v4z"
+              />
+            </svg>
+            <span class="logo-text">Google Classroom</span>
+          </div>
+          <nav class="nav">
+            <a href="#" class="nav-link active" data-page="home">Classes</a>
+            <a href="#" class="nav-link" data-page="calendar">Calendar</a>
+            <a href="#" class="nav-link" data-page="todo">To-do</a>
+          </nav>
+        </div>
+        <div class="header-right">
+          <button
+            class="icon-button"
+            title="Notifications"
+            id="notificationsBtn"
+          >
+            <span class="material-icons">notifications</span>
+            <span class="notification-badge">3</span>
+          </button>
+          <button class="icon-button" title="Apps" id="appsBtn">
+            <span class="material-icons">apps</span>
+          </button>
+          <div class="user-profile">
+            <div class="profile-avatar">A</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Home Page View -->
+    <main class="main-content" id="homeView">
+      <div class="content-wrapper">
+        <div class="page-header">
+          <h1 class="page-title">Classes</h1>
+        </div>
+
+        <!-- Classroom Cards Grid -->
+        <div class="classrooms-grid">
+          <!-- Placeholder Classroom Cards -->
+          <div class="classroom-card" data-class-id="math101">
+            <div
+              class="classroom-header"
+              style="
+                background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+              "
+            >
+              <div class="classroom-icon">M</div>
+            </div>
+            <div class="classroom-body">
+              <h2 class="classroom-name">Mathematics 101</h2>
+              <p class="classroom-teacher">Mr. Johnson</p>
+              <p class="classroom-section">Section A • Room 204</p>
+            </div>
+            <div class="classroom-footer">
+              <button class="classroom-menu" title="More options">
+                <span class="material-icons">more_vert</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="classroom-card" data-class-id="english201">
+            <div
+              class="classroom-header"
+              style="
+                background: linear-gradient(135deg, #ea4335 0%, #fbbc04 100%);
+              "
+            >
+              <div class="classroom-icon">E</div>
+            </div>
+            <div class="classroom-body">
+              <h2 class="classroom-name">English Literature</h2>
+              <p class="classroom-teacher">Ms. Williams</p>
+              <p class="classroom-section">Section B • Room 301</p>
+            </div>
+            <div class="classroom-footer">
+              <button class="classroom-menu" title="More options">
+                <span class="material-icons">more_vert</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="classroom-card" data-class-id="science301">
+            <div
+              class="classroom-header"
+              style="
+                background: linear-gradient(135deg, #34a853 0%, #0f9d58 100%);
+              "
+            >
+              <div class="classroom-icon">S</div>
+            </div>
+            <div class="classroom-body">
+              <h2 class="classroom-name">Biology</h2>
+              <p class="classroom-teacher">Dr. Smith</p>
+              <p class="classroom-section">Section C • Lab 105</p>
+            </div>
+            <div class="classroom-footer">
+              <button class="classroom-menu" title="More options">
+                <span class="material-icons">more_vert</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="classroom-card" data-class-id="history401">
+            <div
+              class="classroom-header"
+              style="
+                background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+              "
+            >
+              <div class="classroom-icon">H</div>
+            </div>
+            <div class="classroom-body">
+              <h2 class="classroom-name">World History</h2>
+              <p class="classroom-teacher">Mr. Davis</p>
+              <p class="classroom-section">Section D • Room 402</p>
+            </div>
+            <div class="classroom-footer">
+              <button class="classroom-menu" title="More options">
+                <span class="material-icons">more_vert</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="classroom-card" data-class-id="art501">
+            <div
+              class="classroom-header"
+              style="
+                background: linear-gradient(135deg, #ff5722 0%, #ff9800 100%);
+              "
+            >
+              <div class="classroom-icon">A</div>
+            </div>
+            <div class="classroom-body">
+              <h2 class="classroom-name">Art & Design</h2>
+              <p class="classroom-teacher">Ms. Martinez</p>
+              <p class="classroom-section">Section E • Studio 201</p>
+            </div>
+            <div class="classroom-footer">
+              <button class="classroom-menu" title="More options">
+                <span class="material-icons">more_vert</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="classroom-card" data-class-id="physics601">
+            <div
+              class="classroom-header"
+              style="
+                background: linear-gradient(135deg, #00bcd4 0%, #009688 100%);
+              "
+            >
+              <div class="classroom-icon">P</div>
+            </div>
+            <div class="classroom-body">
+              <h2 class="classroom-name">Physics</h2>
+              <p class="classroom-teacher">Dr. Brown</p>
+              <p class="classroom-section">Section F • Lab 205</p>
+            </div>
+            <div class="classroom-footer">
+              <button class="classroom-menu" title="More options">
+                <span class="material-icons">more_vert</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Create Class Card -->
+          <div class="classroom-card create-card" id="createClassBtn">
+            <div class="create-card-content">
+              <div class="create-icon">
+                <span class="material-icons">add</span>
+              </div>
+              <p class="create-text">Create class</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Class Stream View (Hidden by default) -->
+    <main class="class-view" id="classView" style="display: none">
+      <!-- Class Banner -->
+      <div class="class-banner" id="classBanner">
+        <div class="banner-content">
+          <div class="banner-left">
+            <div class="banner-icon" id="bannerIcon">M</div>
+            <div>
+              <h1 class="banner-title" id="bannerTitle">Mathematics 101</h1>
+              <p class="banner-subtitle" id="bannerSubtitle">
+                Mr. Johnson • Section A • Room 204
+              </p>
+            </div>
+          </div>
+          <div class="banner-right">
+            <div class="class-code">
+              Class code: <span id="classCode">ABCD-1234</span>
+            </div>
+            <button class="view-btn" id="viewPeopleBtn">View people</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Class Content -->
+      <div class="class-content-wrapper">
+        <div class="class-main">
+          <!-- Class Tabs -->
+          <nav class="class-tabs">
+            <button class="class-tab active" data-tab="stream">Stream</button>
+            <button class="class-tab" data-tab="classwork">Classwork</button>
+            <button class="class-tab" data-tab="people">People</button>
+            <div class="last-update">
+              • Last update: <span id="lastUpdate">Nov 5</span>
+            </div>
+          </nav>
+
+          <!-- Tab Content -->
+          <div id="tab-content">
+            <!-- Stream Tab -->
+            <div id="stream" class="tab-section active">
+              <div class="post-card">
+                <div class="post-header">
+                  <div>
+                    <p class="post-type">
+                      Assignment • <span class="post-author">Mr. Johnson</span>
+                    </p>
+                    <h3 class="post-title">Chapter 5: Algebra Review</h3>
+                  </div>
+                  <div class="post-details">Due Nov 12<br />10 pts</div>
+                </div>
+                <p class="post-description">
+                  Complete exercises 1-20 from Chapter 5. Show all your work and
+                  submit by the due date.
+                </p>
+                <div class="post-actions">
+                  <button class="action-btn">View</button>
+                  <button class="action-btn primary">Mark as done</button>
+                </div>
+              </div>
+
+              <div class="post-card">
+                <div class="post-header">
+                  <div>
+                    <p class="post-type">
+                      Question • <span class="post-author">Mr. Johnson</span>
+                    </p>
+                    <h3 class="post-title">Quick check: Linear Equations</h3>
+                  </div>
+                  <div class="post-details">No due date<br />—</div>
+                </div>
+                <p class="post-description">
+                  What is the solution to 2x + 5 = 13?
+                </p>
+                <div class="post-actions">
+                  <button class="action-btn">View</button>
+                  <button class="action-btn primary">Answer</button>
+                </div>
+              </div>
+
+              <div class="post-card">
+                <div class="post-header">
+                  <div>
+                    <p class="post-type">
+                      Material • <span class="post-author">Mr. Johnson</span>
+                    </p>
+                    <h3 class="post-title">Chapter 5 Notes (PDF)</h3>
+                  </div>
+                  <div class="post-details">No due date<br />—</div>
+                </div>
+                <p class="post-description">
+                  Review these notes before the next class.
+                </p>
+                <div class="post-actions">
+                  <button class="action-btn">View</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Classwork Tab -->
+            <div id="classwork" class="tab-section">
+              <div class="classwork-header">
+                <h2>Classwork</h2>
+                <button class="add-btn">
+                  <span class="material-icons">add</span>
+                  Create
+                </button>
+              </div>
+              <div class="classwork-grid">
+                <div class="classwork-item">
+                  <h3>Chapter 5: Algebra Review</h3>
+                  <p>Complete exercises 1-20 from Chapter 5.</p>
+                  <span class="classwork-type">Assignment</span>
+                </div>
+                <div class="classwork-item">
+                  <h3>Quick check: Linear Equations</h3>
+                  <p>What is the solution to 2x + 5 = 13?</p>
+                  <span class="classwork-type">Question</span>
+                </div>
+                <div class="classwork-item">
+                  <h3>Chapter 5 Notes (PDF)</h3>
+                  <p>Review these notes before the next class.</p>
+                  <span class="classwork-type">Material</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- People Tab -->
+            <div id="people" class="tab-section">
+              <div class="people-header">
+                <h2>People</h2>
+                <button class="invite-btn">
+                  <span class="material-icons">person_add</span>
+                  Invite
+                </button>
+              </div>
+              <div class="people-section">
+                <h3>Teachers</h3>
+                <div class="people-list">
+                  <div class="person-item">
+                    <div class="person-avatar">MJ</div>
+                    <div class="person-info">
+                      <p class="person-name">Mr. Johnson</p>
+                      <p class="person-role">Teacher</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="people-section">
+                <h3>Students (24)</h3>
+                <div class="people-list">
+                  <div class="person-item">
+                    <div class="person-avatar">AB</div>
+                    <div class="person-info">
+                      <p class="person-name">Alex Brown</p>
+                      <p class="person-role">Student</p>
+                    </div>
+                  </div>
+                  <div class="person-item">
+                    <div class="person-avatar">CD</div>
+                    <div class="person-info">
+                      <p class="person-name">Casey Davis</p>
+                      <p class="person-role">Student</p>
+                    </div>
+                  </div>
+                  <div class="person-item">
+                    <div class="person-avatar">EF</div>
+                    <div class="person-info">
+                      <p class="person-name">Emma Foster</p>
+                      <p class="person-role">Student</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="class-sidebar">
+          <div class="sidebar-card">
+            <h4>Upcoming</h4>
+            <div class="upcoming-item">
+              <p class="upcoming-title">Chapter 5: Algebra Review</p>
+              <p class="upcoming-date">Due Nov 12</p>
+            </div>
+            <div class="upcoming-item">
+              <p class="upcoming-title">Midterm Exam</p>
+              <p class="upcoming-date">Due Nov 20</p>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>Class code</h4>
+            <p class="class-code-display" id="sidebarClassCode">ABCD-1234</p>
+            <button class="copy-btn">Copy</button>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>About</h4>
+            <p class="about-text">
+              Welcome to Mathematics 101. This course covers fundamental algebra
+              concepts and problem-solving techniques.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Create Class Modal -->
+    <div class="modal-overlay" id="createClassModal" style="display: none">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Create class</h2>
+          <button class="modal-close" id="closeModal">
+            <span class="material-icons">close</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Class name (required)</label>
+            <input
+              type="text"
+              id="classNameInput"
+              placeholder="e.g., 10th Grade Biology"
+            />
+          </div>
+          <div class="form-group">
+            <label>Section</label>
+            <input
+              type="text"
+              id="sectionInput"
+              placeholder="Section, period, or time"
+            />
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" id="subjectInput" placeholder="e.g., Biology" />
+          </div>
+          <div class="form-group">
+            <label>Room</label>
+            <input type="text" id="roomInput" placeholder="e.g., Room 204" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-secondary" id="cancelCreate">Cancel</button>
+          <button class="btn-primary" id="createClass">Create</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
